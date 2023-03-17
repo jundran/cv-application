@@ -35,7 +35,7 @@ export default function Item ({ index, data }) {
 
 	return (
 		<div className='item'>
-			<h3>{`${capitalize(data.type)} ${index ? index : ''}`}</h3>
+			<h3>{`${capitalize(data.type)} ${data.type !== 'general' ? index : ''}`}</h3>
 			{isEditable ?
 				form :
 				<UneditableItem data={data} handleClick={() => setIsEditable(true)}/>
