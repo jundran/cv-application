@@ -1,0 +1,44 @@
+$width: min(900px, calc(100vw - 64px))
+
+.item
+	border-bottom: 1px solid #999
+	padding: 32px 0 16px 0
+	margin: 0
+	.item-footer
+		display: flex
+		justify-content: space-between
+
+.add-item
+	font-weight: 500
+	margin: 8px 0
+
+$gap: 16px
+.columns li
+	display: grid
+	grid-template-columns: 150px calc($width - 150px - $gap)
+	gap: $gap
+	margin-bottom: 16px
+	span
+		word-wrap: break-word
+
+.field-name
+	font-weight: bold
+
+.icon-button
+	background: none
+	border: none
+	padding: 0 0 0 16px
+	img
+		width: 32px
+
+textarea
+	font-family: sans-serif
+	font-size: .85rem
+	height: 80px
+
+@media(max-width: 600px)
+	.columns li
+		grid-template-columns: $width
+		gap: 4px
+		span:first-of-type
+			padding-bottom: 4px
